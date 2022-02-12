@@ -17,11 +17,18 @@ namespace Aeries.Controllers
         }
 
         [HttpGet("{id:int}")]
-        public async Task<ActionResult<List<ContactModel>>> GetContacts(int id)
+        public async Task<ActionResult<List<ContactModel>>> GetContactsByStudentId(int id)
         {
-            var contacts = from x in _dbContext.ContactData where x.StudentId == id select x;
-            var contactsTask = await contacts.ToListAsync();
-            return contactsTask;
+            try
+            {
+                var contacts = from x in _dbContext.ContactData where x.StudentId == id select x;
+                var contactsTask = await contacts.ToListAsync();
+                return contactsTask;
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
         }
     }
 }

@@ -1,10 +1,12 @@
 ﻿using Aeries.Data;
 using Aeries.Models;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Aeries.Controllers
 {
+    [EnableCors("_CorsPolicy")]
     [ApiController]
     [Route("api/Student")]
     public class StudentController: ControllerBase
@@ -19,8 +21,16 @@ namespace Aeries.Controllers
         [HttpGet]
         public async Task<ActionResult<List<StudentModel>>> GetStudents()
         {
-            var students = await _dbContext.StudentData.ToListAsync();
-            return students;
+            try
+            {
+                var students = await _dbContext.StudentData.ToListAsync();
+                return students;
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+
         }
     }
 }

@@ -58,3 +58,4 @@ C:\Users\ulyss\source\repos\Aeries\Aeries\obj\Debug\net6.0\Aeries.dll
 C:\Users\ulyss\source\repos\Aeries\Aeries\obj\Debug\net6.0\ref\Aeries.dll
 C:\Users\ulyss\source\repos\Aeries\Aeries\obj\Debug\net6.0\Aeries.pdb
 C:\Users\ulyss\source\repos\Aeries\Aeries\obj\Debug\net6.0\Aeries.genruntimeconfig.cache
+C:\Users\ulyss\source\repos\Aeries\Aeries\obj\Debug\net6.0\Aeries.csproj.AssemblyReference.cache
