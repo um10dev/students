@@ -1,9 +1,9 @@
-﻿using Students.Data;
-using Students.Models;
+﻿using Aeries.Data;
+using Aeries.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace Students.Controllers
+namespace Aeries.Controllers
 {
     [ApiController]
     [Route("api/Contact")]
