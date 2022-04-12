@@ -1,7 +1,7 @@
-﻿using Students.Models;
+﻿using Aeries.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Students.Data
+namespace Aeries.Data
 {
     public class ContactDBContext: DbContext
     {
