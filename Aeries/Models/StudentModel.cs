@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace Aeries.Models
+namespace Students.Models
 {
     [Keyless]
     public class StudentModel
