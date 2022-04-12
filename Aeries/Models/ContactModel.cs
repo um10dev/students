@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace Students.Models
+namespace Aeries.Models
 {
     [Keyless]
     public class ContactModel
