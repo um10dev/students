@@ -1,9 +1,9 @@
-﻿using Aeries.Data;
-using Aeries.Models;
+﻿using Students.Data;
+using Students.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace Aeries.Controllers
+namespace Students.Controllers
 {
     [ApiController]
     [Route("api/Contact")]
@@ -23,7 +23,7 @@ namespace Aeries.Controllers
             {
                 var contacts = from x in _dbContext.ContactData where x.StudentId == id select x;
                 var contactsTask = await contacts.ToListAsync();
-                return contactsTask;
+                return Ok(contactsTask);
             }
             catch (Exception ex)
             {
