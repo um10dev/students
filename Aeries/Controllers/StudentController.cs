@@ -1,5 +1,5 @@
-﻿using Students.Data;
-using Students.Models;
+﻿using Aeries.Data;
+using Aeries.Models;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
