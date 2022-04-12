@@ -1,10 +1,10 @@
-﻿using Aeries.Data;
-using Aeries.Models;
+﻿using Students.Data;
+using Students.Models;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace Aeries.Controllers
+namespace Students.Controllers
 {
     [EnableCors("_CorsPolicy")]
     [ApiController]
@@ -24,7 +24,7 @@ namespace Aeries.Controllers
             try
             {
                 var students = await _dbContext.StudentData.ToListAsync();
-                return students;
+                return Ok(students);
             }
             catch (Exception ex)
             {
